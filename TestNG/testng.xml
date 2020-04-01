@@ -2,10 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="/Users/yoodahun/Documents/Github/Java/Selenium WebDriver with Java/Framework_in_AutomationTest/TestNG">
+          name="TestNG1">
         <classes> <!-- module -->
-            <class name="section18.RunningTestcases">
-            </class> <!-- module -->
+            <class name="section18.RunningTestcases"/>
+            <class name="section18.AnnotationTest"/>
+        </classes>
+    </test>
+    <test name="TestNG2">
+        <classes>
+            <class name="section18.PrioritizingTestcase">
+                <methods>
+                    <include name="mobile.*"></include>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
