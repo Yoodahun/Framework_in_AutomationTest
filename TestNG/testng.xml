@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <parameter name="URL" value="https://www.naver.com"></parameter>
+    <parameter name="APIKey/Username" value="APIKey Username"></parameter>
+
+    <listeners>
+        <listener class-name="section18.Listeners"/>
+    </listeners>
+
     <test verbose="2" preserve-order="true"
           name="TestNG1">
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="Smoke"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
         <classes> <!-- module -->
+            <class name="section18.GlobalParameter"/>
             <class name="section18.RunningTestcases"/>
             <class name="section18.AnnotationTest"/>
         </classes>
@@ -11,9 +24,9 @@
     <test name="TestNG2">
         <classes>
             <class name="section18.PrioritizingTestcase">
-                <methods>
-                    <include name="mobile.*"></include>
-                </methods>
+<!--                <methods>-->
+<!--                    <exclude name="mobileLogin"></exclude>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>

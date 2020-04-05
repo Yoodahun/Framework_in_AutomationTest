@@ -1,10 +1,8 @@
 package section18;
 
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 //Section18-135 Running testcaes in TestNG
 public class RunningTestcases {
@@ -17,15 +15,16 @@ public class RunningTestcases {
 
     @Test
     public void Demo() {
-        System.out.println("hello");
+        System.out.println("Demo");
+        Assert.assertTrue(true);
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void Demo2nd(){
         System.out.println("world !");
 
     }
-    @Test
+    @Test(dependsOnMethods = {"Demo"})
     public void Demo3rd(){
         System.out.println("world !");
 
@@ -39,6 +38,11 @@ public class RunningTestcases {
     @AfterSuite
     public void last() {
         System.out.println("After suit!");
+    }
+
+    @AfterClass
+    public void afterClass(){
+        System.out.println("afterClass");
     }
 
 }
