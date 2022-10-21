@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="AppWebLogin">
+        <classes>
+            <class name="priorityExecute.AppLoginTest"/>
+
+            <class name="priorityExecute.WebLoginTest"/>
+        </classes>
+    </test>
+    <test name="APILogin">
+        <classes>
+            <class name="priorityExecute.APILoginTest">
+<!--                <methods>-->
+<!--                    <exclude name="internalApiLogin"/>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>

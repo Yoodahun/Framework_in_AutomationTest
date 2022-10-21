@@ -1,8 +1,6 @@
 package section18;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class AnnotationTest {
 
@@ -11,10 +9,20 @@ public class AnnotationTest {
         System.out.println("Start this AnnotationClass");
     }
 
+    @AfterClass
+    public void afterClass() {
+        System.out.println("End this AnnotationClass");
+    }
+
     @BeforeTest
     public void prerequire() {
         System.out.println("Ready to Test !");
 
+    }
+
+    @AfterTest
+    public void endTest() {
+        System.out.println("End Test !");
     }
 
     @Test(groups = {"Smoke"})
