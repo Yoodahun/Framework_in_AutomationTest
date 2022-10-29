@@ -14,4 +14,5 @@ public class APILoginTest extends AnnotationTest {
     public void externalApiLogin() {
         System.out.println("external API Login");
     }
+
 }

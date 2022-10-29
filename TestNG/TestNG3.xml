@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Android">
+        <groups>
+            <run>
+                <include name="Android"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="priorityExecute.WebLoginTest"/>
+            <class name="priorityExecute.AppLoginTest"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="iOS">
+        <groups>
+            <run>
+                <include name="iOS"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="priorityExecute.WebLoginTest"/>
+            <class name="priorityExecute.AppLoginTest"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="web">
+        <groups>
+            <run>
+                <include name="web"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="priorityExecute.WebLoginTest"/>
+            <class name="priorityExecute.AppLoginTest"/>
+        </classes>
+    </test>
+<!--    <test verbose="2" preserve-order="true" name="api">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="web"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="priorityExecute.APILoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

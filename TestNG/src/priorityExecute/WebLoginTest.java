@@ -4,17 +4,17 @@ import org.testng.annotations.Test;
 
 public class WebLoginTest {
 
-    @Test
+    @Test(groups = {"web"})
     public void pcWebLogin() {
         System.out.println("pc web login");
     }
 
-    @Test
+    @Test(groups = {"Android"})
     public void androidWebLogin() {
         System.out.println("Android web login");
     }
 
-    @Test
+    @Test(groups = {"iOS"})
     public void iosWebLogin() {
         System.out.println("IOS web login");
     }

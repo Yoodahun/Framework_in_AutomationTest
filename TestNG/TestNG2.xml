@@ -3,17 +3,21 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="AppWebLogin">
         <classes>
-            <class name="priorityExecute.AppLoginTest"/>
-
+            <class name="priorityExecute.AppLoginTest">
+<!--                <methods>-->
+<!--                    <exclude name="androidlogin"/>-->
+<!--                </methods>-->
+            </class>
             <class name="priorityExecute.WebLoginTest"/>
+            <class name="priorityExecute.APILoginTest"/>
         </classes>
     </test>
     <test name="APILogin">
         <classes>
             <class name="priorityExecute.APILoginTest">
-<!--                <methods>-->
-<!--                    <exclude name="internalApiLogin"/>-->
-<!--                </methods>-->
+                <methods>
+                    <exclude name="internalApiLogin"/>
+                </methods>
             </class>
         </classes>
     </test>
